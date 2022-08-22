@@ -31,7 +31,7 @@ public class SwaggerConfig {
                 "La API REST de ToDo App.",
                 "v1",
                 "Terms of service",
-                new Contact("Carlosdizx - Github", "portafolio-carlos-diaz.netlify.app/", "carlodiaz@umariana.edu.co"),
+                new Contact("Carlosdizx - Github", "portafolio-carlos-diaz.netlify.app", "carlodiaz@umariana.edu.co"),
                 "License of API", "API license URL", Collections.emptyList());
     }
 }

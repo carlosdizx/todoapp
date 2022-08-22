@@ -1,5 +1,6 @@
 package finaktiva.data.entity.tasktodo;
 
+import finaktiva.domain.tasktodo.TaskStatus;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.RequiredArgsConstructor;

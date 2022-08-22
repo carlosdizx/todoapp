@@ -1,4 +1,4 @@
-package finaktiva.data.entity.tasktodo;
+package finaktiva.domain.tasktodo;
 
 public enum TaskStatus {
     ON_TIME,

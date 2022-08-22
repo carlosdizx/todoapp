@@ -15,12 +15,11 @@ import java.util.Collections;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
-
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("finaktiva.controller"))
+                .apis(RequestHandlerSelectors.basePackage("finaktiva.controller")) //http://localhost:1200/swagger-ui.html
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo());
@@ -32,7 +31,7 @@ public class SwaggerConfig {
                 "La API REST de ToDo App.",
                 "v1",
                 "Terms of service",
-                new Contact("SACAViX Tech", "www.example.com", "myeaddress@company.com"),
+                new Contact("Carlosdizx - Github", "portafolio-carlos-diaz.netlify.app/", "carlodiaz@umariana.edu.co"),
                 "License of API", "API license URL", Collections.emptyList());
     }
 }

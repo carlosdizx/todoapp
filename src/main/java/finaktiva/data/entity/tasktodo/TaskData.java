@@ -19,7 +19,7 @@ import java.util.Objects;
 @RequiredArgsConstructor
 @Entity
 @Table(name = "tasks")
-public class Task {
+public class TaskData {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,8 +35,8 @@ public class Task {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        Task task = (Task) o;
-        return id != null && Objects.equals(id, task.id);
+        TaskData taskData = (TaskData) o;
+        return id != null && Objects.equals(id, taskData.id);
     }
 
     @Override

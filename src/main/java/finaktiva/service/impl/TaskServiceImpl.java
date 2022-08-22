@@ -1,13 +1,13 @@
 package finaktiva.service.impl;
 
-import finaktiva.data.entity.tasktodo.Task;
+import finaktiva.data.entity.tasktodo.TaskData;
 import finaktiva.data.repository.TaskRepository;
 import finaktiva.util.GenericServiceApiImpl;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TaskServiceImpl extends GenericServiceApiImpl<Task, Long> {
+public class TaskServiceImpl extends GenericServiceApiImpl<TaskData, Long> {
 
     private final TaskRepository repository;
 
@@ -16,7 +16,7 @@ public class TaskServiceImpl extends GenericServiceApiImpl<Task, Long> {
     }
 
     @Override
-    public JpaRepository<Task, Long> getDao() {
+    public JpaRepository<TaskData, Long> getDao() {
         return repository;
     }
 }

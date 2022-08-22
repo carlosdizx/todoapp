@@ -1,6 +1,7 @@
 package finaktiva.data.entity.tasktodo;
 
 import finaktiva.domain.tasktodo.TaskStatus;
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -14,6 +15,7 @@ import java.time.LocalDateTime;
 
 
 @Data
+@Builder
 @Entity
 @Table(name = "tasks")
 public class TaskData {

@@ -5,12 +5,15 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.RequiredArgsConstructor;
-import lombok.Builder;
-import org.hibernate.Hibernate;
 
-import javax.persistence.*;
+import javax.persistence.Table;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Enumerated;
+import javax.persistence.EnumType;
 import java.time.LocalDateTime;
-import java.util.Objects;
 
 
 @Getter
@@ -31,12 +34,4 @@ public class TaskData {
     private boolean finished;
     @Enumerated(EnumType.STRING)
     private TaskStatus taskStatus;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        TaskData data = (TaskData) o;
-        return id != null && Objects.equals(id, data.id);
-    }
 }

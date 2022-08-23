@@ -11,7 +11,7 @@ public class TaskDataMapper implements IMapper<Task, TaskData> {
 
     @Override
     public TaskData map(Task in) {
-        final TaskData taskData = TaskData.builder().build();
+        final TaskData taskData = new TaskData();
         BeanUtils.copyProperties(in, taskData, "id");
         return taskData;
     }

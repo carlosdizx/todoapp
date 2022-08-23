@@ -1,21 +1,22 @@
 package finaktiva.data.entity.tasktodo;
 
 import finaktiva.domain.tasktodo.TaskStatus;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.RequiredArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import org.hibernate.Hibernate;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Enumerated;
-import javax.persistence.EnumType;
+import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 
-@Data
-@Builder
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 @Entity
 @Table(name = "tasks")
 public class TaskData {
@@ -30,4 +31,12 @@ public class TaskData {
     private boolean finished;
     @Enumerated(EnumType.STRING)
     private TaskStatus taskStatus;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        TaskData data = (TaskData) o;
+        return id != null && Objects.equals(id, data.id);
+    }
 }

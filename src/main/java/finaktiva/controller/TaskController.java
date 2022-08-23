@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @CrossOrigin(origins = {"*"})
 @RestController
@@ -19,12 +22,16 @@ public class TaskController {
     @Autowired
     private TaskService service;
 
+    @GetMapping
+    public List<Task> findAll() {
+        final List<Task> tasks = new ArrayList<>();
+        service.getAll().forEach(taskData -> tasks.add(MAPPER.iMap(taskData)));
+        return tasks;
+    }
+
     @PostMapping
     public Task save(@Valid @RequestBody Task task) {
         TaskData data = MAPPER.map(task);
-        System.out.println("----------");
-        System.out.println(data);
-        System.out.println("----------");
         service.save(data);
         return task;
     }

@@ -1,9 +1,7 @@
 package finaktiva.service.impl;
 
-import finaktiva.data.entity.tasktodo.TaskData;
-import finaktiva.data.entity.tasktodo.TaskDataMapper;
-import finaktiva.data.repository.TaskRepository;
-import finaktiva.domain.tasktodo.Task;
+import finaktiva.repository.tasktodo.TaskData;
+import finaktiva.repository.tasktodo.TaskRepository;
 import finaktiva.service.api.TaskService;
 import finaktiva.util.GenericServiceApiImpl;
 import org.springframework.data.jpa.repository.JpaRepository;

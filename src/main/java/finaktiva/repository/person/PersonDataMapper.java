@@ -1,4 +1,4 @@
-package finaktiva.data.entity.person;
+package finaktiva.repository.person;
 
 import finaktiva.domain.person.Person;
 import finaktiva.domain.person.PersonFactory;

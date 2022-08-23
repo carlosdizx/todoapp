@@ -1,6 +1,6 @@
-package finaktiva.data.repository;
+package finaktiva.repository.tasktodo;
 
-import finaktiva.data.entity.tasktodo.TaskData;
+import finaktiva.repository.tasktodo.TaskData;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TaskRepository extends JpaRepository<TaskData, Long> {

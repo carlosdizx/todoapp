@@ -1,4 +1,4 @@
-package finaktiva.data.entity.person;
+package finaktiva.repository.person;
 
 import lombok.Getter;
 import lombok.Setter;

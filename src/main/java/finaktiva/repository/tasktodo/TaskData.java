@@ -1,4 +1,4 @@
-package finaktiva.data.entity.tasktodo;
+package finaktiva.repository.tasktodo;
 
 import finaktiva.domain.tasktodo.TaskStatus;
 import lombok.Getter;

@@ -1,7 +1,7 @@
 package finaktiva.controller;
 
-import finaktiva.data.entity.tasktodo.TaskData;
-import finaktiva.data.entity.tasktodo.TaskDataMapper;
+import finaktiva.repository.tasktodo.TaskData;
+import finaktiva.repository.tasktodo.TaskDataMapper;
 import finaktiva.domain.tasktodo.Task;
 import finaktiva.service.api.TaskService;
 import org.springframework.beans.BeanUtils;

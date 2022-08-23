@@ -1,4 +1,4 @@
-package finaktiva.data.entity.tasktodo;
+package finaktiva.repository.tasktodo;
 
 import finaktiva.domain.tasktodo.Task;
 import finaktiva.domain.tasktodo.TaskFactory;

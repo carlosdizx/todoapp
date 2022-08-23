@@ -1,6 +1,6 @@
 package finaktiva.domain.tasktodo;
 
-import finaktiva.data.entity.tasktodo.TaskData;
+import finaktiva.repository.tasktodo.TaskData;
 
 public class TaskFactory {
     public static Task createTask(final TaskData taskData) {

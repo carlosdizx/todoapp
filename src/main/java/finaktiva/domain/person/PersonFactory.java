@@ -1,6 +1,6 @@
 package finaktiva.domain.person;
 
-import finaktiva.data.entity.person.PersonData;
+import finaktiva.repository.person.PersonData;
 
 public class PersonFactory {
     public static Person createPerson(final PersonData personData) {

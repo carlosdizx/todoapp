@@ -1,5 +1,6 @@
 package finaktiva.controller;
 
+import finaktiva.data.entity.tasktodo.TaskData;
 import finaktiva.data.entity.tasktodo.TaskDataMapper;
 import finaktiva.domain.tasktodo.Task;
 import finaktiva.service.api.TaskService;
@@ -20,7 +21,11 @@ public class TaskController {
 
     @PostMapping
     public Task save(@Valid @RequestBody Task task) {
-        service.save(MAPPER.map(task));
+        TaskData data = MAPPER.map(task);
+        System.out.println("----------");
+        System.out.println(data);
+        System.out.println("----------");
+        service.save(data);
         return task;
     }
 }

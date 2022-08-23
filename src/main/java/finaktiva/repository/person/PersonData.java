@@ -10,7 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import java.time.LocalTime;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -23,6 +23,6 @@ public class PersonData {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String names;
-    private LocalTime created_at;
+    private LocalDate created_at;
 }
 

@@ -1,10 +1,12 @@
 package finaktiva.domain.tasktodo;
 
+import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
 @Data
+@Builder
 public class Task {
     private final Long id;
     private final String title;
